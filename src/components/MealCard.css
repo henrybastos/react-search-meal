@@ -1,0 +1,108 @@
+.meal-card {
+  width: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-dark-gray-02);
+  color: var(--primary-white);
+  margin: 15px;
+  position: relative;
+  transition: 500ms all ease;
+  font-size: 15px;
+  min-height: 325px;
+}
+
+.meal-card img, .meal-image {
+  width: 250px;
+  height: 250px;
+}
+
+.meal-image {
+  overflow: hidden;
+}
+
+.meal-card img:hover[data-has-url='true']  {
+  transform: scale(1.05);
+  transition: all ease 250ms;
+  cursor: pointer;
+}
+
+.meal-card-name {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 250px;
+  height: 110px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+}
+
+.meal-card h2 {
+  font-size: 20px;
+  position: absolute;
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 10px;
+  max-width: calc(250px - 20px);
+  margin-top: 5px;
+}
+
+.meal-card-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.meal-card-info span {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  background: var(--primary-dark-gray-04);
+  border-radius: 5px;
+}
+
+.meal-card-footer {
+  height: 34px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.meal-card-footer[data-has-double-url='true']::before {
+  content: '';
+  width: 1px;
+  height: 24px;
+  background: var(--primary-dark-gray-04);
+  position: absolute;
+  top: 5px;
+  left: 50%;
+}
+/* 
+.meal-card-footer[data-has-url='false']::before {
+  width: 0;
+  height: 0;
+} */
+
+.meal-card-footer a {
+  background: var(--primary-dark-gray-03);
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--primary-white);
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.meal-card-footer a:hover {
+  background: var(--primary-dark-gray-04);
+  cursor: pointer;
+}
