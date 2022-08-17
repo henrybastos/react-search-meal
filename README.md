@@ -1,6 +1,7 @@
 # React Search Meal
 
 This project was made for learning purposes only. It's main goal is to exercise the following aspects:
+- Simple API use;
 - Limiting HTTP Requests through Deboucing;
 - ReactJS' useState and useEffect;
 - UI and UX;
@@ -15,6 +16,10 @@ To view the app running, open [http://localhost:3000](http://localhost:3000) in 
 The route used in this project to search the meals is: `www.themealdb.com/api/json/v1/1/search.php?s=<mealName>`.
 
 - `<mealName>` : The meal desired to search.
+
+## Debouncing
+
+The `debounce` function prevents the user from making a request before a certain time has passed since the last word was typed, capping the amount of requests made by the user.
 
 ## Troubleshooting
 
